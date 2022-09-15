@@ -22,9 +22,8 @@ $data = [
 
 // For get URL PATH
 $request = $_SERVER['REQUEST_URI'];
-
+$request = rtrim($request,"/");
 switch ($request) {
-    
     case '/daftar-vendor' :
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode($data);
